@@ -1,0 +1,19 @@
+Log: Log file open, Wed Jul 25 19:06:15 2012
+Init: Name subsystem initialized
+Init: Version: 451
+Init: Compiled: May  6 2003 22:27:59
+Init: Command line: CTF-Face?game=Botpack.CTFGame ini=ut.ini log=ut.log -nohomedir
+Init: Base directory: 
+Init: Character set: ANSI
+Log: Bound to Editor.so
+Log: Bound to Core.so
+Log: Bound to Engine.so
+Init: Object subsystem initialized
+Log: appRequestExit(0)
+Critical: appSleep
+Critical: appPlatformInit
+Critical: appInit
+Exit: Executing UObject::StaticShutdownAfterError
+Exit: Exiting.
+Uninitialized: Name subsystem shut down
+Uninitialized: Log file closed, Wed Jul 25 19:06:15 2012
