@@ -1,0 +1,27 @@
+#! /bin/sh
+### BEGIN INIT INFO
+# Provides:          ut-server
+# Required-Start:    networking
+# Required-Stop:
+# Default-Start:     2 3 4 5
+# Default-Stop:      S 0 1 6
+# Short-Description: UT Server Daemon
+# Description:       Starts/Stops/Restarts the Unreal Tournament Server Daemon
+### END INIT INFO
+
+set -e
+
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+DESC="UT Server"
+NAME=ut-server
+USER=ut-server
+DIR=/opt/ut-server/System
+DAEMON=$DIR/startscript.sh
+PIDFILE=/var/run/$NAME.pid
+SCRIPTNAME=/etc/init.d/$NAME
+
+# Gracefully exit if the package has been removed.
+test -x $DAEMON || exit 0
+
+cd $DIR
+sudo -u ut-server ./startscript.sh $1
